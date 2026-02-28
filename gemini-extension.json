@@ -1,0 +1,59 @@
+{
+  "name": "proxmox-plus",
+  "version": "1.0.0",
+  "mcpServers": {
+    "proxmox": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/RekklesNA/ProxmoxMCP-Plus", "python", "-m", "proxmox_mcp.server"],
+      "env": {
+        "PYTHONPATH": "src"
+      }
+    }
+  },
+  "contextFileName": "GEMINI.md",
+  "commands": [
+    {
+      "name": "proxmox:status",
+      "path": "./commands/status.js"
+    }
+  ],
+  "settings": [
+    {
+      "name": "PROXMOX_HOST",
+      "type": "string",
+      "description": "Proxmox server IP or hostname (e.g. 192.168.1.100)",
+      "required": true
+    },
+    {
+      "name": "PROXMOX_USER",
+      "type": "string",
+      "description": "Proxmox username (e.g. root@pam)",
+      "required": true
+    },
+    {
+      "name": "PROXMOX_TOKEN_NAME",
+      "type": "string",
+      "description": "API Token ID",
+      "required": true
+    },
+    {
+      "name": "PROXMOX_TOKEN_VALUE",
+      "type": "string",
+      "description": "API Token Secret",
+      "required": true,
+      "secret": true
+    },
+    {
+      "name": "PROXMOX_PORT",
+      "type": "string",
+      "description": "Proxmox API port (default: 8006)",
+      "default": "8006"
+    },
+    {
+      "name": "PROXMOX_VERIFY_SSL",
+      "type": "string",
+      "description": "Verify SSL certificates (true/false)",
+      "default": "false"
+    }
+  ]
+}
