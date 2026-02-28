@@ -14,13 +14,13 @@ This extension integrates [ProxmoxMCP-Plus](https://github.com/RekklesNA/Proxmox
 You can install this extension directly via the Gemini CLI:
 
 ```bash
-gemini extensions install https://github.com/YOUR_USERNAME/proxmox-plus-extension
+gemini extensions install https://github.com/tymorton/proxmox-plus-extension
 ```
 
 Alternatively, for local development:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/proxmox-plus-extension
+git clone https://github.com/tymorton/proxmox-plus-extension
 gemini extensions link ./proxmox-plus-extension
 ```
 
